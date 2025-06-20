@@ -3,29 +3,26 @@ variable "vpc_cidr" {
 }
 
 variable "enable_dns_hostnames" {
-    default = true
-  
+  default = true
 }
 
 variable "project_name" {
-  
+
 }
 
 variable "environment" {
-  
+
 }
 
 variable "common_tags" {
-    type = map  
-   #default = {}
-} 
+  type = map(any)
+  #default = {}
+}
 
 variable "vpc_tags" {
-    default = {}
-  
+  default = {}
 }
 
 variable "igw_tags" {
-    default = {}
-  
+  default = {}
 }
