@@ -26,3 +26,43 @@ variable "vpc_tags" {
 variable "igw_tags" {
   default = {}
 }
+
+ variable "public_subnet_cidr" {
+  type = list
+    validation {
+        condition     = length(var.public_subnet_cidr) == 2
+        error_message = "please provider valid subnet_cidr"
+  }
+}
+
+variable "public_subnet_tags" {
+  default = {}
+  
+}
+ 
+ variable "private_subnet_cidr" {
+  type = list
+    validation {
+        condition     = length(var.private_subnet_cidr) == 2
+        error_message = "please provider valid subnet_cidr"
+  }
+}
+
+variable "private_subnet_tags" {
+  default = {}
+  
+}
+
+variable "database_subnet_cidr" {
+  type = list
+    validation {
+        condition     = length(var.database_subnet_cidr) == 2
+        error_message = "please provider valid subnet_cidr"
+  }
+}
+
+variable "database_subnet_tags" {
+  default = {}
+
+}
+ 
